@@ -1,0 +1,82 @@
+.tempHeader {
+  display: block;
+  position: relative;
+  color: #0087ca;
+  text-align: center;
+}
+
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------------------ */
+/* --------DISPLAY FOUR COLUMN table--------  */
+@media screen and (max-width: 3000px) {
+  .fourColTable {
+    display: block;
+  }
+  .threeColTable {
+    display: none;
+  }
+  .twoColTable {
+    display: none;
+  }
+} 
+/* ------------------------------------------- */
+/* --------DISPLAY THREE COLUMN table--------  */
+
+@media screen and (max-width: 700px) {
+  .fourColTable {
+    display: none;
+  }
+  .threeColTable {
+    display: block;
+
+  }
+  .twoColTable {
+    display: none;
+  }
+}
+/* ------------------------------------------- */
+  /* --------DISPLAY TWO COLUMN table--------  */
+
+  @media screen and (max-width: 550px) {
+    .fourColTable {
+      display: none;
+    }
+    .threeColTable {
+      display: none;
+
+    }
+    .twoColTable {
+      display: block;
+    }
+  }
+
+  /* ---------------------------------- */
+   /* --------DISPLAY NO table--------  */
+
+   @media screen and (max-width: 370px) {
+    .fourColTable {
+      display: none;
+    }
+    .threeColTable {
+      display: none;
+
+    }
+    .twoColTable {
+      display: none;
+    }
+  }
+
+.gridWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+}

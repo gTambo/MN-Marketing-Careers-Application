@@ -1,0 +1,140 @@
+.nav {
+  /* flex box layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+
+ 
+  margin: 0;
+  margin-bottom: 20px;
+
+  background: rgb(143, 178, 198);
+background: linear-gradient(180deg, rgb(192, 221, 238) 93%, rgba(231,242,248,0.7217261904761905) 100%);
+
+
+  /* overflow: hidden; */
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+
+
+/*--------NAV TITLE ON TOP LEFT--------*/
+/* 
+this is conditional: 
+screen size 768 and over = full bar logo
+screen size under 768 = only the circle portion of the logo 
+*/
+
+.nav-title {
+  width: 400px;
+}
+
+
+@media screen and (max-width: 600px){ 
+  .nav-title {
+    display: none;
+  }
+
+}
+
+.nav-title-circle-only {
+  display: none;
+}
+
+@media screen and (max-width: 600px){ 
+  .nav-title-circle-only {
+    display: block;
+    position: relative;
+    margin: 15px;
+    width: 80px;
+  }
+}
+
+/*-----------Top-right word nav links-----------*/
+
+
+.nav-words-visitor {
+  margin-right: 16px;
+  font-size: 20px;
+
+}
+
+.nav-words-admin {
+  margin-right: 8px;
+  font-size: 14px;
+
+}
+
+.navLink {
+  display: inline-block;
+  color: #263a3e;
+  font-weight: bold;
+  text-align: center;
+  padding: 24px 6px;
+  text-decoration: none;
+  /* font-size: 14px; */
+  /* //IMPORTANT font size of nav words up top! */
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+  text-align: center;
+}
+
+
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #263a3e;
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+
+
+@media screen and (max-width: 990px){ 
+
+  .nav-words-visitor {
+    display: none;
+  }
+
+  .nav-words-admin {
+    display: none;
+  }
+}
+
+
+/*-----------Hamburger-----------*/
+
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 990px){ 
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    padding: 30px 10px;
+  }
+}
+
+
+
